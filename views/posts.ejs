@@ -1,0 +1,7 @@
+<h1>Atılan postlar:</h1>
+
+<% for (let i=0; i<kisiler.length; i++){ %>
+<div>
+    <h2><%= kisiler[i].name %> kişisi tarafından (<%= kisiler[i].email %> )</h2><p> <%= kisiler[i].text %> yayınlandı.</p>
+</div>
+<% } %>
