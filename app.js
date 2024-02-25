@@ -26,7 +26,6 @@ app.post("/submit", (req, res) => {
     res.render("posts.ejs", {kisiler: kisiler, name: yeniKisi.name, email: yeniKisi.email, text: yeniKisi.text});
 });
 app.get("/kisiler", (req, res) => {
-    // Tüm kişilerin bilgilerini JSON formatında yanıt olarak gönderin
     res.json(kisiler);
 });
 
