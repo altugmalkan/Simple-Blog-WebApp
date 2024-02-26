@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 class Kisi{
@@ -29,7 +31,7 @@ app.get("/kisiler", (req, res) => {
     res.json(kisiler);
 });
 
-
 app.listen(port, () => {
     console.log(`Listening on port ${port}.`);
 });
+

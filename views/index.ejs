@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>BlogApp</title>
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
     <%- include("partials/header.ejs") %>
-    <div class="form">
-    <form action="/submit" method="POST">
-        <input type="text" name="name" placeholder="name">
-        <input type="text" name="email"
-        placeholder="email">
-        <input type="text" name="text"
-        placeholder="What are your toughts today ?">
-        <input type="submit" name="Post">
-    </form>
+    <div class="container">
+        <h1>Welcome to the Simple Blog</h1>
+        <form action="/submit" method="post" class="post-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="text">Post:</label><br>
+            <textarea id="text" name="text" rows="4" cols="50" required></textarea><br>
+            <button type="submit">Post</button>
+        </form>
     </div>
-
-    <%- include("partials/footer.ejs") %>
 </body>
 </html>
